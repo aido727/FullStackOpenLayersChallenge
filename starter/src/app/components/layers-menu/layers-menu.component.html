@@ -1,0 +1,16 @@
+<mat-dialog-content>
+  <div class="py-2" *ngFor="let layer of data.layers">
+    <mat-slide-toggle [(ngModel)]="layer.active" (change)="onLayerChange()">
+      <div class="flex">
+        <div
+          class="w-4 h-4 opacity-60 mx-2"
+          [ngStyle]="{
+            'background-color': layer.fillColor,
+            border: '1px solid' + layer.strokeColor
+          }"
+        ></div>
+        {{ layer.name }}
+      </div>
+    </mat-slide-toggle>
+  </div>
+</mat-dialog-content>

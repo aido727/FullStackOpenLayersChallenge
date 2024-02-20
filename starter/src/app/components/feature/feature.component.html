@@ -1,0 +1,7 @@
+<mat-list role="list">
+  <ng-container *ngFor="let property of properties">
+    <mat-list-item role="listitem">
+      {{ property }}: {{ getPropertyValue(property) }}
+    </mat-list-item>
+  </ng-container>
+</mat-list>

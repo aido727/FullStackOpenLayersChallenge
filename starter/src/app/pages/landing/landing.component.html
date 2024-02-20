@@ -1,4 +1,14 @@
-<mat-card>
-  <mat-card-title> Map </mat-card-title>
-  <starter-map></starter-map>
-</mat-card>
+<div class="h-full flex flex-row">
+  <starter-map
+    class="h-full w-full"
+    [layers]="layers"
+    (setFeatures)="selectFeatures($event)"
+  ></starter-map>
+  <info
+    *ngIf="selectedFeatures.length > 0"
+    class="max-w-[40%]"
+    [features]="selectedFeatures"
+    [layers]="layers"
+    (deselect)="deselectFeatures()"
+  ></info>
+</div>

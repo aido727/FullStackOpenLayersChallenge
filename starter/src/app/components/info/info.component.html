@@ -1,0 +1,28 @@
+<div id="feature-content" class="flex flex-row h-screen">
+  <div id="dragbar" class="w-2 h-full bg-neutral-500 cursor-col-resize"></div>
+  <div class="flex flex-col h-screen w-full overflow-hidden">
+    <div class="flex items-center justify-between p-2 pl-4">
+      <p class="font-bold text-lg">Selected Features</p>
+      <button mat-icon-button (click)="closeView()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-1 p-4 h-full overflow-y-auto">
+      <mat-accordion *ngFor="let feature of features"
+        ><mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title
+              [ngStyle]="{
+              'color': getMatchingLayer(feature).strokeColor,
+            }"
+              >{{ getMatchingLayer(feature).singularName }}</mat-panel-title
+            >
+          </mat-expansion-panel-header>
+          <feature
+            [featureWithLayerId]="feature"
+            [layer]="getMatchingLayer(feature)"
+          ></feature> </mat-expansion-panel
+      ></mat-accordion>
+    </div>
+  </div>
+</div>

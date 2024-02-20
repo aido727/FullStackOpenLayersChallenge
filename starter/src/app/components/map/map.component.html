@@ -1,3 +1,21 @@
-<div class="relative grid grid-cols-1">
+<div class="relative grid grid-cols-1 h-full">
+  <div
+    *ngIf="!mapFirstLoadComplete"
+    class="w-full h-full bg-white opacity-50 absolute z-10"
+  ></div>
+  <button
+    *ngIf="mapFirstLoadComplete"
+    mat-raised-button
+    class="!absolute z-50 right-2 top-2 w-fit"
+    (click)="zoomToExtent()"
+  >
+    Reset Map Position
+  </button>
+  <layers-button
+    *ngIf="mapFirstLoadComplete"
+    class="absolute z-50 left-10 top-2"
+    [layers]="layers"
+    (detectLayerChange)="onLayerChange()"
+  ></layers-button>
   <div #mapContainer class="h-full w-full min-h-96"></div>
 </div>
