@@ -14,5 +14,5 @@ To start the development server run `nx serve starter`. Open your browser and na
 - Error Handling if any outbound calls fail
   - Currently it will get stuck in loading forever
 - Custom styling that doesn't lean on material defaults so hard
-- Time series visualisation
-- Features regarding analysis/correlations in datasets
+- Time series visualisation (ran out of time)
+- Features regarding analysis/correlations in datasets (ran out of time)
