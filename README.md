@@ -17,4 +17,4 @@ This challenge is designed to test your skills in developing an Angular user int
 - **Statistical Analysis**: Implement statistical analysis or data correlations to uncover insights from the data.
 
 ## Developers Notes
-- Please see the Readme.MD inside the 'starter' directory for my specific notes post development!
+- Please see the README.md inside the 'starter' directory for my specific notes post development!
