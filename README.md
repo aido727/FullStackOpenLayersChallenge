@@ -15,3 +15,6 @@ This challenge is designed to test your skills in developing an Angular user int
 ## Bonus
 - **Time Series Data**: How would you incorporate time series data to add historical context to your maps.
 - **Statistical Analysis**: Implement statistical analysis or data correlations to uncover insights from the data.
+
+## Developers Notes
+- Please see the Readme.MD inside the 'starter' directory for my specific notes post development!
